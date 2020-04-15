@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Montserrat|Lora'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+
+    {% block stylesheets %}{% endblock %}
+{% endblock extra_css %}
+
+{% block content %}
+
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+
+<!-- {% include 'home/welcome_page.html' %} -->
+<div class="row">
+    <div class="topnav" id="myTopnav">
+        <div class="company"> Geek For Geek's</div>
+        <div>
+            <a href="#home" class="active">Home</a>
+            <a href="#news">Subjects</a>
+            <a href="#contact">Interview</a>
+            <div class="dropdown_new">
+                <button class="dropbtn">Subjects
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                        <!-- <div class="dropdown_new">
+                            <button class="dropbtn">Digital
+                                    <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Analog</a>
+                                <a href="#">Digital</a>
+                            </div>
+                        </div> -->
+                <a href="#">Analog</a>
+                <a href="#">Digital</a>
+                <a href="#">VLSI</a>
+                </div>
+            </div>
+            <a href="#about">Design Problem</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </div>
+</div>
+<div>
+<div class="foot">
+<footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Geek.com <i> WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming ELectronic Engineer with basic. Geek focuses on providing the most efficient basics of the concept. We will help Engineer build up concepts in different field.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">VLSI</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">Electronics</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">Digital Electronics</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Analog Electronics</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Verilog</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Scripting</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+           <a href="#">Geek's</a>.
+              </p>
+            </div>
+  
+            <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div> -->
+          </div>
+        </div>
+  </footer>
+</div>
+</div>
+{% endblock content %}
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
