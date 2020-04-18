@@ -244,9 +244,22 @@ svg:not(:root) {
     float: left;
     overflow: hidden;
   }
+
+  
   
   /* Style the dropdown button to fit inside the topnav */
   .dropdown_new .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropbtn_new {
     font-size: 17px;
     border: none;
     outline: none;
@@ -266,7 +279,45 @@ svg:not(:root) {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
+
+  .nested-dropdown-new
+  {
+    float: left;
+    overflow: hidden;
+  }
+
+  /* .nested_dropdown {
+    display: inline;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  } */
+
+  .nested-dropdown-content {
+    display: inline;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
   
+  .nested-dropdown-new a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nested-dropdown-new a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
   /* Style the links inside the dropdown */
   .dropdown-content a {
     float: none;
@@ -276,6 +327,7 @@ svg:not(:root) {
     display: block;
     text-align: left;
   }
+  
   
   /* Add a dark background on topnav links and the dropdown button on hover */
   .topnav a:hover, .dropdown_new:hover .dropbtn {
