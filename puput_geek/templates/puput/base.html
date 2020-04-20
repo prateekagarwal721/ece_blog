@@ -44,7 +44,9 @@
 {% block blog_header %}
 <div class="row">
         <div class="topnav" id="myTopnav">
-            <div class="company"> Geek For Geek's</div>
+            <div class="company" style="font-size: 20px; color:white; align-self:center; margin-right:10px; margin-left:10px">
+                <div> Geek For ECE</div>
+            </div>
             <div>
                 <a href="#home" class="active">Home</a>
                 <a href="/blog">Subjects</a>
@@ -83,20 +85,22 @@
     </div> -->
 {% endblock blog_header %}
 {% wagtailuserbar %}
-<div class="container container-blog" style="margin-top: 15px">
+<div class="container container-blog" style="margin-top: 50px; width: 100%">
     <div class="row">
-        <div class="col-sm-8 col-md-9">
+        <div class="col-sm-2 col-md-2">
+        </div>
+        <div class="col-sm-7 col-md-7">
             {% block content %}{% endblock content %}
             {% block extra_content %}{% endblock extra_content %}
         </div>
 
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-3 col-md-3">
             <div class="blog_sidebar">
-                <div class="rss-sitemap">
+                <!-- <div class="rss-sitemap">
                     <a href="{% feeds_url blog_page %}" target="_blank" title="RSS">
                          <i class="fa fa-rss-square"></i> <span>{% trans 'Feed RSS' %}</span>
                     </a>
-                </div>
+                </div> -->
                 <form name="search_form" class="search_form" method="get" action="{% routablepageurl blog_page 'entries_search' %}">
                     <div class="input-group">
                          <input type="search" name="q" placeholder="{% trans 'Search' %}">
@@ -107,25 +111,25 @@
                 </form>
 
                 {% if blog_page.display_last_entries %}
-                    <ul class="sidebar">
+                    <ul class="sidebar" style="font-size: 18px; font-family:sans-serif">
                         <h4>{% trans 'Last Entries' %}</h4>
                         {% recent_entries blog_page.num_last_entries %}
                     </ul>
                 {% endif %}
                 {% if blog_page.display_popular_entries %}
-                    <ul class="sidebar">
+                    <ul class="sidebar" style="font-size: 18px; font-family:sans-serif">
                         <h4>{% trans 'Popular Entries' %}</h4>
                         {% popular_entries blog_page.num_popular_entries %}
                     </ul>
                 {% endif %}
                 {% if blog_page.display_categories %}
-                    <ul class="sidebar">
+                    <ul class="sidebar" style="font-size: 18px; font-family:sans-serif">
                         <h4>{% trans 'Categories' %}</h4>
                         {% categories_list %}
                     </ul>
                 {% endif %}
                 {% if blog_page.display_tags %}
-                    <ul class="sidebar">
+                    <ul class="sidebar" style="font-size: 18px; font-family:sans-serif">
                         <h4>{% trans 'Tags' %}</h4>
                         {% tags_list %}
                     </ul>
