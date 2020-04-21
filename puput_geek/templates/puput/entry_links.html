@@ -7,25 +7,25 @@
             {{ entry.owner.username }}
         </a>
     </li> -->
-    <li style="font-size: 14px; font-family:sans-serif">
-        <i class="fa fa-calendar"></i>
+    <li style="font-size: 14px; font-family:sans-serif  ">
+        <i class="fa fa-calendar" style="color:grey"></i>
         {{ entry.date|date:"DATE_FORMAT" }}
     </li>
     {% if entry.categories.count > 0 %}
         <li>
-            <i class="fa fa-folder-open"></i>
+            <i class="fa fa-folder-open" style="color:grey"></i>
             {% categories_list entry.categories %}
         </li>
     {% endif %}
     {% if entry.tags.count > 0 %}
         <li>
-            <i class="fa fa-tag"></i>
+            <i class="fa fa-tag" style="color:grey"></i>
             {% tags_list blog_page.num_tags_entry_header entry.tags %}
         </li>
     {% endif %}
     {% if blog_page.display_comments %}
         <li>
-            <i class="fa fa-comments"></i>
+            <i class="fa fa-comments" style="color:grey"></i>
             {{ entry.num_comments }}
         </li>
     {% endif %}

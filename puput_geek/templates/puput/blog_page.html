@@ -51,7 +51,7 @@
         {% endif %}
         {% for entry in entries %}
             {% entry_url entry blog_page as post_url %}
-            <article class="box page-content blog_grid">
+            <article class="box page-content blog_grid" style="border-top: 2px solid grey">
                 {% include 'puput/entry_page_header.html' %}
                 <section>
                     {% if entry.header_image %}
@@ -81,7 +81,7 @@
                             </li>
                         </ul>
                         <div class="col-md-3">
-                            <a class="blog_btn continue" href="{{ post_url }}">{% trans 'Continue reading' %} &raquo;</a>
+                            <a class="blog_btn continue" href="{{ post_url }}" style="color: black; font-weight:400">{% trans 'Continue reading' %} &raquo;</a>
                         </div>
                     </div>
                 </section>

@@ -36,7 +36,7 @@
             }
         </style>
         <link rel="stylesheet" href="{% static 'puput/css/puput.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}"> -->
         <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
         <link rel="stylesheet" href="{% static 'css/header.css' %}">
     {% endblock %}
@@ -116,11 +116,12 @@
             </section>
         </div>
     </div> -->
-    <div style="background-color: #333;
+    <div style="background-color: #26272b;
     display: flex;">
-    <div style="font-size: 20px; color:white; align-self:center; margin-right:10px; margin-left:10px">
+    <div style="font-size: 15px; color:white; align-self:center; margin-right:10px; margin-left:10px">
             <div> Geek For ECE</div>
     </div>
+    <div>
     <nav>
             <ul class="nav">
               <li><a href="/home">Home</a></li>
@@ -157,6 +158,7 @@
                 </li>
             </ul>
           </nav>
+        </div>
         </div>
 {% endblock blog_header %}
 {% wagtailuserbar %}
