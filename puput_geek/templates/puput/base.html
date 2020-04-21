@@ -38,33 +38,66 @@
         <link rel="stylesheet" href="{% static 'puput/css/puput.css' %}"/>
         <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
         <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+        <link rel="stylesheet" href="{% static 'css/header.css' %}">
     {% endblock %}
 </head>
 <body>
 {% block blog_header %}
-<div class="row">
-        <div class="topnav" id="myTopnav">
-            <div class="company" style="font-size: 20px; color:white; align-self:center; margin-right:10px; margin-left:10px">
+<!-- <div class="row">
+    <div class="topnav" id="myTopnav">
+        <div class="company" style="font-size: 20px; color:white; align-self:center; margin-right:30px; margin-left:10px">
                 <div> Geek For ECE</div>
+        </div>
+        <div>
+            <a href="/home">Home</a>
+            <div class="dropdown_new">
+                <button class="dropbtn">Subjects
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/blog">Digital Electronics</a>
+                    <a href="/analog-electronics">Analog Electronics</a>   
+                    <a> 
+                        <button class="nested_button" style="background-color: #f9f9f9;
+                        border: none;">VLSI
+                            <i class="fa fa-caret-right"></i>
+                        </button>
+                        <div style="display: none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;">
+                            <a href="/blog">Digital Electronics</a>
+                            <a href="/analog-electronics">Analog Electronics</a>
+                    </div>
+                </a>                
+                    
+                    <a href="/scripting">Scripting</a>
+                </div>
             </div>
-            <div>
-                <a href="#home" class="active">Home</a>
-                <a href="/blog">Subjects</a>
-                <a href="#contact">Interview</a>
-                <div class="dropdown_new">
-                    <button class="dropbtn">Subjects
+            <div class="dropdown_new">
+                    <button class="dropbtn">Courses
                     <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">Analog</a>
-                        <a href="#">VLSI</a>
+                        <a href="/verilog">Verilog</a>
                     </div>
                 </div>
-                <a href="#about">Design Problem</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="#contact">Interview</a>
+            <div class="dropdown_new">
+                    <button class="dropbtn">Courses
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/digital-design">Design Problem - Digital</a>
+                        <a href="/analog-design">Design Problem - Analog</a>
+                    </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
     </div>
+</div> -->
     <!-- <div class="about">
         {% if blog_page.header_image %}
             <span class="image featured">
@@ -83,6 +116,52 @@
             </section>
         </div>
     </div> -->
+    <div style="background-color: #333;
+    display: flex;">
+    <div style="font-size: 20px; color:white; align-self:center; margin-right:10px; margin-left:10px">
+            <div> Geek For ECE</div>
+    </div>
+    <nav>
+            <ul class="nav">
+              <li><a href="/home">Home</a></li>
+              <li><a href="#">Subjects</a>
+                <ul>
+                    <li><a href="#">Digital Electronics</a>
+                        <ul>
+                            <li><a href="/blog">Combinational Logic</a></li>
+                            <li><a href="/blog">Sequential Logic</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/analog-electronics">Analog Electronics</a></li>
+                    <li><a href="#">VLSI</a>
+                        <ul>
+                        <li><a href="/vlsi">Synthesis</a></li>
+                        <li><a href="/vlsi">Low Power VLSI</a></li>
+                        <li><a href="/vlsi">Design Verification</a></li>
+                        <li><a href="/vlsi">PnR</a></li>
+                        <li><a href="/vlsi">Clock Tree Synthesis</a></li>
+                        <li><a href="/vlsi">Static Timing Analysis</a></li>
+                        </ul>
+                    </li>
+                  <li><a href="/scripting">Scripting</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#">Courses</a>
+                <ul>
+                  <li><a href="/verilog">Verilog</a></li>
+                </ul>
+              </li>
+              <li><a href="/interview">Interview</a></li>
+              <li><a href="#">Design Problem</a>
+                <ul>
+                    <li><a href="/deisgn-analog">Design Problem - Digital</a></li>
+                    <li><a href="/design-digital">Design Problem - Analog</a></li>
+                </ul>
+                </li>
+            </ul>
+          </nav>
+        </div>
 {% endblock blog_header %}
 {% wagtailuserbar %}
 <div class="container container-blog" style="margin-top: 50px; width: 100%">
@@ -218,3 +297,14 @@
 {% endblock js %}
 </body>
 </html>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+          }
+</script>

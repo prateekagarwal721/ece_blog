@@ -9,6 +9,7 @@
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,27 +26,98 @@ Delete the line below if you're just getting started and want to remove the welc
 {% comment %}
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
-<div class="row">
+<!-- <div class="row">
     <div class="topnav" id="myTopnav">
-        <div class="company"> Geek For Geek's</div>
-        <div>
-            <a href="/home" class="active">Home</a>
-            <a href="/blog">Subjects</a>
-            <a href="#contact">Interview</a>
+        <div class="company" style="font-size: 20px; color:white; align-self:center; margin-right:10px; margin-left:10px">
+                <div> Geek For ECE</div>
+        </div> -->
+        
+            <!-- <a href="/home" class="active">Home</a>
             <div class="dropdown_new">
                 <button class="dropbtn">Subjects
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="/vlsi">Analog</a>
+                    <a href="/vlsi">Digital Electronics</a>
+                    <a href="/vlsi">Analog Electronics</a>
                     <a href="/vlsi">VLSI</a>
+                    <div class="nested_drop">
+                            <button class="nested_button">VLSI
+                                <i class="fa fa-caret-right"></i>
+                            </button>
+                        </div>
+                    <a href="/vlsi">Scripting</a>
                 </div>
             </div>
-            <a href="#about">Design Problem</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
-    </div>
-</div>
+            <div class="dropdown_new">
+                    <button class="dropbtn">Courses
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/vlsi">Verilog</a>
+                    </div>
+                </div>
+            <a href="#contact">Interview</a>
+            <div class="dropdown_new">
+                    <button class="dropbtn">Courses
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#about">Design Problem - Digital</a>
+                        <a href="#about">Design Problem - Analog</a>
+                    </div>
+            </div>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> -->
+            <div style="background-color: #333;
+            display: flex;">
+            <div style="font-size: 20px; color:white; align-self:center; margin-right:10px; margin-left:10px">
+                    <div> Geek For ECE</div>
+            </div>
+            <nav>
+                    <ul class="nav">
+                      <li><a href="/home">Home</a></li>
+                      <li><a href="#">Subjects</a>
+                        <ul>
+                            <li><a href="#">Digital Electronics</a>
+                                <ul>
+                                    <li><a href="/blog">Combinational Logic</a></li>
+                                    <li><a href="/blog">Sequential Logic</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/analog-electronics">Analog Electronics</a></li>
+                            <li><a href="#">VLSI</a>
+                                <ul>
+                                <li><a href="/vlsi">Synthesis</a></li>
+                                <li><a href="/vlsi">Low Power VLSI</a></li>
+                                <li><a href="/vlsi">Design Verification</a></li>
+                                <li><a href="/vlsi">PnR</a></li>
+                                <li><a href="/vlsi">Clock Tree Synthesis</a></li>
+                                <li><a href="/vlsi">Static Timing Analysis</a></li>
+                                </ul>
+                            </li>
+                          <li><a href="/scripting">Scripting</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="#">Courses</a>
+                        <ul>
+                          <li><a href="/verilog">Verilog</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="/interview">Interview</a></li>
+                      <li><a href="#">Design Problem</a>
+                        <ul>
+                            <li><a href="/deisgn-analog">Design Problem - Digital</a></li>
+                            <li><a href="/design-digital">Design Problem - Analog</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                  </nav>
+                </div>
+       
+    <!-- </div>
+</div> -->
 <div class="top_foot">
 <div class="foot">
 <footer class="site-footer">
