@@ -56,6 +56,9 @@ INSTALLED_APPS = [
     'colorful',
 ]
 
+PUPUT_COMMENTS_PROVIDER = 'puput.comments.DisqusCommentsProvider'
+
+
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

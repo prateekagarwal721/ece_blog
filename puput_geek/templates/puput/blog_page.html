@@ -84,7 +84,11 @@
                             <a class="blog_btn continue" href="{{ post_url }}" style="color: black; font-weight:400">{% trans 'Continue reading' %} &raquo;</a>
                         </div>
                     </div>
+                    <div>
+                        {% show_comments %}
+                    </div>
                 </section>
+                
             </article>
         {% empty %}
             <span>{% trans 'No results found.' %}</span>

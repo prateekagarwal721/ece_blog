@@ -11,6 +11,8 @@ ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+PUPUT_COMMENTS_PROVIDER = 'puput.comments.DisqusCommentsProvider'
+
 
 
 
